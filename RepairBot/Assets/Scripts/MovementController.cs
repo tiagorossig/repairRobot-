@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MovementController : MonoBehaviour
 {
@@ -36,11 +37,6 @@ public class MovementController : MonoBehaviour
         }
     }
 
-    private void CheckLegs()
-    {
-       
-    }
-
     public void setMoveSpeed(float newspeed)
     {
         moveSpeed = newspeed;
@@ -49,5 +45,13 @@ public class MovementController : MonoBehaviour
     public void setJumpForce(float newjump)
     {
         jumpForce = newjump;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Death")
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 }

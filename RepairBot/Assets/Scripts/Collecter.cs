@@ -58,12 +58,12 @@ public class Collecter : MonoBehaviour
                 {
                     Vector3 temp = transform.position;
                     transform.position = new Vector3(temp.x, 4f, temp.z);
-                    gameObject.GetComponent<MovementController>().setJumpForce(1500);
+                    gameObject.GetComponent<MovementController>().setJumpForce(1000);
                 }
                 hasleg1 = true;
                 if (hasleg1 && hasleg2)
                 {
-                    gameObject.GetComponent<MovementController>().setJumpForce(3500);
+                    gameObject.GetComponent<MovementController>().setJumpForce(1700);
                 }
                 transform.FindChild("leg").gameObject.SetActive(true);
             }
@@ -74,12 +74,12 @@ public class Collecter : MonoBehaviour
                 {
                     Vector3 temp = transform.position;
                     transform.position = new Vector3(temp.x, 4f, temp.z);
-                    gameObject.GetComponent<MovementController>().setJumpForce(1500);
+                    gameObject.GetComponent<MovementController>().setJumpForce(1000);
                 }
                 hasleg2 = true;
                 if (hasleg1 && hasleg2)
                 {
-                    gameObject.GetComponent<MovementController>().setJumpForce(3500);
+                    gameObject.GetComponent<MovementController>().setJumpForce(1700);
                 }
                 transform.FindChild("leg2").gameObject.SetActive(true);
             }

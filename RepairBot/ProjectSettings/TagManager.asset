@@ -10,6 +10,7 @@ TagManager:
   - Leg2
   - Torso
   - Ground
+  - Death
   layers:
   - Default
   - TransparentFX
