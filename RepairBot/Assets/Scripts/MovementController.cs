@@ -28,4 +28,9 @@ public class MovementController : MonoBehaviour
     {
         moveSpeed = newspeed;
     }
+
+    public void setJumpForce(float newjump)
+    {
+        jumpForce = newjump;
+    }
 }
