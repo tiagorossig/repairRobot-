@@ -25,7 +25,6 @@ public class MovementController : MonoBehaviour
             rigid.AddForce(Vector3.up * jumpForce);
             isGrounded = false;
         }
-        CheckLegs();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -35,16 +34,6 @@ public class MovementController : MonoBehaviour
         {
             isGrounded = true;
         }
-    }
-
-    private void CheckLegs()
-    {
-       
-    }
-
-    public void setMoveSpeed(float newspeed)
-    {
-        moveSpeed = newspeed;
     }
 
     public void setMoveSpeed(float newspeed)
