@@ -17,13 +17,17 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume;
             s.source.loop = s.loop;
         }
-        StartGameMusic();
+        StartGameMusic(); // ****Move to the Start of the main scene
     }
 
     public void StartGameMusic()
     {
         Play("Head");
         Play("Torso");
+        Play("Arm1");
+        Play("Arm2");
+        Play("Leg1");
+        Play("Leg2");
     }
     
     public void Play(string soundName) // for playing general sounds
@@ -33,14 +37,19 @@ public class AudioManager : MonoBehaviour
     }
 
 
-    public IEnumerator AddTheme(string soundName) // for adding parts of the main theme when picking up parts
+    public void AddTheme(string soundName)
+    {
+        StartCoroutine(VolumeIncrease(soundName));
+    }
+
+    public IEnumerator VolumeIncrease(string soundName) // for adding parts of the main theme when picking up parts
     {
         Sound s = Array.Find(sounds, sound => sound.name == soundName);
 
-        while (s.volume < 1)
+        while (s.source.volume < 1)
         {
-            s.volume += .1f;
-            yield return new WaitForSeconds(.5f);
+            s.source.volume += .02f;
+            yield return new WaitForSeconds(.1f);
         }
     }
     

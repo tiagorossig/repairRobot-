@@ -45,6 +45,7 @@ public class Collecter : MonoBehaviour
         GameObject other = collision.gameObject;
         if ("Torso".Equals(other.tag))
         {
+            FindObjectOfType<AudioManager>().AddTheme("Torso");
             Destroy(other);
             Vector3 temp = transform.position;
             transform.position = new Vector3(temp.x, 3f, temp.z);
@@ -61,11 +62,13 @@ public class Collecter : MonoBehaviour
             {
                 Destroy(other);
                 transform.FindChild("arm").gameObject.SetActive(true);
+                FindObjectOfType<AudioManager>().AddTheme("Arm1");
             }
             if ("Arm2".Equals(other.tag))
             {
                 Destroy(other);
                 transform.FindChild("arm2").gameObject.SetActive(true);
+                FindObjectOfType<AudioManager>().AddTheme("Arm2");
             }
             if ("Leg".Equals(other.tag))
             {
@@ -75,6 +78,7 @@ public class Collecter : MonoBehaviour
                     Vector3 temp = transform.position;
                     transform.position = new Vector3(temp.x, 4f, temp.z);
                     gameObject.GetComponent<MovementController>().setJumpForce(1000);
+
                 }
                 hasleg1 = true;
                 if (hasleg1 && hasleg2)
@@ -83,6 +87,7 @@ public class Collecter : MonoBehaviour
                 }
                 transform.FindChild("leg").gameObject.SetActive(true);
                 gameObject.GetComponent<MovementController>().setMovement(2);
+                FindObjectOfType<AudioManager>().AddTheme("Leg1");
             }
             if ("Leg2".Equals(other.tag))
             {
@@ -100,6 +105,7 @@ public class Collecter : MonoBehaviour
                 }
                 transform.FindChild("leg2").gameObject.SetActive(true);
                 gameObject.GetComponent<MovementController>().setMovement(2);
+                FindObjectOfType<AudioManager>().AddTheme("Leg2");
             }
         }
     }
