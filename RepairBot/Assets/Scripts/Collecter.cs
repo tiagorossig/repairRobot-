@@ -5,13 +5,15 @@ using UnityEngine;
 public class Collecter : MonoBehaviour
 {
 
-    private bool haslegs;
+    private bool hasleg1;
+    private bool hasleg2;
     private bool hasTorso;
 
     // Start is called before the first frame update
     void Start()
     {
-        haslegs = false;
+        hasleg1 = false;
+        hasleg2 = false;
         hasTorso = false;
     }
 
@@ -51,22 +53,32 @@ public class Collecter : MonoBehaviour
             if ("Leg".Equals(other.tag))
             {
                 Destroy(other);
-                if (!haslegs)
+                if (!(hasleg1 || hasleg2))
                 {
                     Vector3 temp = transform.position;
                     transform.position = new Vector3(temp.x, 4f, temp.z);
-                    haslegs = true;
+                    hasleg1 = true;
+                    gameObject.GetComponent<MovementController>().setJumpForce(500);
+                }
+                if(hasleg1 && hasleg2)
+                {
+                    gameObject.GetComponent<MovementController>().setJumpForce(1000);
                 }
                 transform.FindChild("leg").gameObject.SetActive(true);
             }
             if ("Leg2".Equals(other.tag))
             {
                 Destroy(other);
-                if (!haslegs)
+                if (!(hasleg1 || hasleg2))
                 {
                     Vector3 temp = transform.position;
                     transform.position = new Vector3(temp.x, 4f, temp.z);
-                    haslegs = true;
+                    hasleg2 = true;
+                    gameObject.GetComponent<MovementController>().setJumpForce(500);
+                }
+                if (hasleg1 && hasleg2)
+                {
+                    gameObject.GetComponent<MovementController>().setJumpForce(1000);
                 }
                 transform.FindChild("leg2").gameObject.SetActive(true);
             }
