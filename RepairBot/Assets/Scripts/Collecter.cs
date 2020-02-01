@@ -32,7 +32,7 @@ public class Collecter : MonoBehaviour
         {
             Destroy(other);
             Vector3 temp = transform.position;
-            transform.position = new Vector3(temp.x, 5f, temp.z);
+            transform.position = new Vector3(temp.x, 3f, temp.z);
             transform.FindChild("torso").gameObject.SetActive(true);
             gameObject.GetComponent<Rigidbody>().mass += 3;
             gameObject.GetComponent<MovementController>().setMoveSpeed(0.2f);
