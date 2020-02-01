@@ -36,6 +36,11 @@ public class MovementController : MonoBehaviour
         }
     }
 
+    private void CheckLegs()
+    {
+       
+    }
+
     public void setMoveSpeed(float newspeed)
     {
         moveSpeed = newspeed;

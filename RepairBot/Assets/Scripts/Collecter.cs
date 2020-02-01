@@ -32,11 +32,11 @@ public class Collecter : MonoBehaviour
         {
             Destroy(other);
             Vector3 temp = transform.position;
-            transform.position = new Vector3(temp.x, 1.6f, temp.z);
+            transform.position = new Vector3(temp.x, 3f, temp.z);
             transform.FindChild("torso").gameObject.SetActive(true);
             gameObject.GetComponent<Rigidbody>().mass += 3;
             gameObject.GetComponent<MovementController>().setMoveSpeed(0.2f);
-            gameObject.GetComponent<MovementController>().setJumpForce(350);
+            gameObject.GetComponent<MovementController>().setJumpForce(500);
             hasTorso = true;
         }
         if (hasTorso)
@@ -58,12 +58,12 @@ public class Collecter : MonoBehaviour
                 {
                     Vector3 temp = transform.position;
                     transform.position = new Vector3(temp.x, 4f, temp.z);
-                    hasleg1 = true;
-                    gameObject.GetComponent<MovementController>().setJumpForce(1000);
+                    gameObject.GetComponent<MovementController>().setJumpForce(1500);
                 }
-                if(hasleg1 && hasleg2)
+                hasleg1 = true;
+                if (hasleg1 && hasleg2)
                 {
-                    gameObject.GetComponent<MovementController>().setJumpForce(3700);
+                    gameObject.GetComponent<MovementController>().setJumpForce(3500);
                 }
                 transform.FindChild("leg").gameObject.SetActive(true);
             }
@@ -74,12 +74,12 @@ public class Collecter : MonoBehaviour
                 {
                     Vector3 temp = transform.position;
                     transform.position = new Vector3(temp.x, 4f, temp.z);
-                    hasleg2 = true;
-                    gameObject.GetComponent<MovementController>().setJumpForce(1000);
+                    gameObject.GetComponent<MovementController>().setJumpForce(1500);
                 }
+                hasleg2 = true;
                 if (hasleg1 && hasleg2)
                 {
-                    gameObject.GetComponent<MovementController>().setJumpForce(3700);
+                    gameObject.GetComponent<MovementController>().setJumpForce(3500);
                 }
                 transform.FindChild("leg2").gameObject.SetActive(true);
             }
