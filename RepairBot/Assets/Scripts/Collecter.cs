@@ -6,8 +6,10 @@ public class Collecter : MonoBehaviour
 {
 
     private bool hasleg1;
+    private bool hasArm;
     private bool hasleg2;
     private bool hasTorso;
+    private bool hasKey;
 
     // Start is called before the first frame update
     void Start()
@@ -15,12 +17,34 @@ public class Collecter : MonoBehaviour
         hasleg1 = false;
         hasleg2 = false;
         hasTorso = false;
+        hasArm = false;
+        hasKey = false;
     }
 
     // Update is called once per frame
     void Update()
     {
     
+    }
+
+    public bool gotTorso()
+    {
+        return hasTorso;
+    }
+
+    public bool gotleg1()
+    {
+        return hasleg1;
+    }
+
+    public bool gotleg2()
+    {
+        return hasleg2;
+    }
+
+    public bool gotArm()
+    {
+        return hasArm;
     }
 
 
@@ -37,6 +61,7 @@ public class Collecter : MonoBehaviour
             gameObject.GetComponent<Rigidbody>().mass += 3;
             gameObject.GetComponent<MovementController>().setMoveSpeed(0.2f);
             gameObject.GetComponent<MovementController>().setJumpForce(500);
+            gameObject.GetComponent<MovementController>().setMovement(1);
             hasTorso = true;
         }
         if (hasTorso)
@@ -45,6 +70,7 @@ public class Collecter : MonoBehaviour
             {
                 Destroy(other);
                 transform.FindChild("arm").gameObject.SetActive(true);
+                hasArm = true;
             }
             if ("Arm2".Equals(other.tag))
             {
@@ -64,6 +90,7 @@ public class Collecter : MonoBehaviour
                 if (hasleg1 && hasleg2)
                 {
                     gameObject.GetComponent<MovementController>().setJumpForce(1700);
+                    gameObject.GetComponent<MovementController>().setMovement(2);
                 }
                 transform.FindChild("leg").gameObject.SetActive(true);
             }
@@ -80,9 +107,20 @@ public class Collecter : MonoBehaviour
                 if (hasleg1 && hasleg2)
                 {
                     gameObject.GetComponent<MovementController>().setJumpForce(1700);
+                    gameObject.GetComponent<MovementController>().setMovement(2);
                 }
                 transform.FindChild("leg2").gameObject.SetActive(true);
             }
+        }
+        if ("Key".Equals(other.tag))
+        {
+            if (hasArm)
+            {
+                Destroy(other);
+                transform.FindChild("arm").FindChild("key").gameObject.SetActive(true);
+                hasKey = true;
+            }
+            else return;
         }
     }
 }

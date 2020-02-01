@@ -6,6 +6,7 @@ public class CameraController : MonoBehaviour
 {
     [SerializeField] private float mouseSensitivity;
     [SerializeField] private Transform player;
+    [SerializeField] private Transform pivot;
 
     private float xAxisClamp;
 
@@ -45,7 +46,13 @@ public class CameraController : MonoBehaviour
         }
 
         transform.Rotate(Vector3.left * mouseY);
-        player.Rotate(Vector3.up * mouseX);
+        pivot.Rotate(Vector3.up * mouseX);
+        if (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0)
+        {
+            //player.Rotate(Vector3.up * mouseX);
+            player.rotation = pivot.rotation;
+            pivot.rotation = new Quaternion(0f, 0f, 0f, 0f);
+        }
     }
 
     private void ClampXAxisRotationToValue(float value)

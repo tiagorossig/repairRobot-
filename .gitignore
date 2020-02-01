@@ -9,8 +9,14 @@
 sysinfo.txt
 *.stackdump
 /Assets/AssetStoreTools*
+/Library/StateCache
+**/Artifacts
+**/ShaderCache
+**/ScriptAssemblies/*
 *.apk
 *.unitypackage
+*.dll
+*.log
  
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
@@ -29,6 +35,7 @@ sysinfo.txt
 .consulo/
 /*.tmp
 /*.svd
+/*.pdb
  
 # ============ #
 # OS generated #
