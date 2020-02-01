@@ -46,7 +46,7 @@ public class AudioManager : MonoBehaviour
     {
         Sound s = Array.Find(sounds, sound => sound.name == soundName);
 
-        while (s.source.volume < 1)
+        while (s.source.volume < .8)
         {
             s.source.volume += .02f;
             yield return new WaitForSeconds(.1f);
