@@ -10,6 +10,7 @@ TagManager:
   - Leg2
   - Torso
   - Ground
+  - Key
   layers:
   - Default
   - TransparentFX
