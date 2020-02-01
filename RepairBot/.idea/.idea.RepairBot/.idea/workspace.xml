@@ -13,15 +13,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Audio/AudioManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="480">
+              <caret line="35" column="39" lean-forward="true" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="47" />
               <folding>
-                <marker date="1580583874319" expanded="false" signature="6:57" ph="..." />
-                <marker date="1580583874319" expanded="true" signature="100:646" ph="{...}" />
-                <marker date="1580583874319" expanded="true" signature="164:433" ph="{...}" />
-                <marker date="1580583874319" expanded="true" signature="206:401" ph="{...}" />
-                <marker date="1580583874319" expanded="true" signature="467:501" ph="{...}" />
-                <marker date="1580583874319" expanded="true" signature="540:644" ph="{...}" />
+                <marker date="1580584654142" expanded="false" signature="6:83" ph="..." />
+                <marker date="1580584654142" expanded="true" signature="126:1065" ph="{...}" />
+                <marker date="1580584654142" expanded="true" signature="190:459" ph="{...}" />
+                <marker date="1580584654142" expanded="true" signature="232:427" ph="{...}" />
+                <marker date="1580584654142" expanded="true" signature="493:550" ph="{...}" />
+                <marker date="1580584654142" expanded="true" signature="624:733" ph="{...}" />
+                <marker date="1580584654142" expanded="true" signature="845:1058" ph="{...}" />
+                <marker date="1580584654142" expanded="true" signature="953:1052" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -31,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/Assets/Audio/Sound.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+              <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
               <folding>
                 <marker date="1580583874351" expanded="false" signature="6:78" ph="..." />
                 <marker date="1580583874351" expanded="true" signature="120:292" ph="{...}" />
@@ -59,7 +61,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="110" />
     <option name="y" value="116" />
     <option name="width" value="2800" />
@@ -125,12 +127,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1580582578949</updated>
-      <workItem from="1580582580424" duration="1441000" />
+      <workItem from="1580582580424" duration="2102000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1441000" />
+    <option name="totallyTimeSpent" value="2102000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -142,7 +144,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1513" height="973" extended-state="7" />
+    <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
@@ -208,7 +210,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/Audio/Sound.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
           <folding>
             <marker date="1580583874351" expanded="false" signature="6:78" ph="..." />
             <marker date="1580583874351" expanded="true" signature="120:292" ph="{...}" />
@@ -218,15 +220,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Audio/AudioManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="480">
+          <caret line="35" column="39" lean-forward="true" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="47" />
           <folding>
-            <marker date="1580583874319" expanded="false" signature="6:57" ph="..." />
-            <marker date="1580583874319" expanded="true" signature="100:646" ph="{...}" />
-            <marker date="1580583874319" expanded="true" signature="164:433" ph="{...}" />
-            <marker date="1580583874319" expanded="true" signature="206:401" ph="{...}" />
-            <marker date="1580583874319" expanded="true" signature="467:501" ph="{...}" />
-            <marker date="1580583874319" expanded="true" signature="540:644" ph="{...}" />
+            <marker date="1580584654142" expanded="false" signature="6:83" ph="..." />
+            <marker date="1580584654142" expanded="true" signature="126:1065" ph="{...}" />
+            <marker date="1580584654142" expanded="true" signature="190:459" ph="{...}" />
+            <marker date="1580584654142" expanded="true" signature="232:427" ph="{...}" />
+            <marker date="1580584654142" expanded="true" signature="493:550" ph="{...}" />
+            <marker date="1580584654142" expanded="true" signature="624:733" ph="{...}" />
+            <marker date="1580584654142" expanded="true" signature="845:1058" ph="{...}" />
+            <marker date="1580584654142" expanded="true" signature="953:1052" ph="{...}" />
           </folding>
         </state>
       </provider>
