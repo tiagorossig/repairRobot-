@@ -12,13 +12,15 @@ public class Collecter : MonoBehaviour
     void Start()
     {
         haslegs = false;
+        hasTorso = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+    
     }
+
 
     [System.Obsolete]
     private void OnCollisionEnter(Collision collision)
@@ -30,9 +32,8 @@ public class Collecter : MonoBehaviour
             Vector3 temp = transform.position;
             transform.position = new Vector3(temp.x, 1.6f, temp.z);
             transform.FindChild("torso").gameObject.SetActive(true);
-            Vector3 cameratemp = transform.FindChild("Main Camera").position;
-            cameratemp.z = cameratemp.z - 2;
-            transform.FindChild("Main Camera").position = cameratemp;
+            gameObject.GetComponent<Rigidbody>().mass += 3;
+            gameObject.GetComponent<MovementController>().setMoveSpeed(0.2f);
             hasTorso = true;
         }
         if (hasTorso)
