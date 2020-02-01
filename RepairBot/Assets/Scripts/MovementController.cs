@@ -42,7 +42,6 @@ public class MovementController : MonoBehaviour
             rigid.AddForce(Vector3.up * jumpForce);
             isGrounded = false;
         }
-        CheckLegs();
     }
 
     private void OnCollisionEnter(Collision collision)
