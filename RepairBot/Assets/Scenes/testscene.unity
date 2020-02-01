@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 88842933}
   - component: {fileID: 88842934}
   - component: {fileID: 88842935}
+  - component: {fileID: 88842936}
   m_Layer: 0
   m_Name: head
   m_TagString: Untagged
@@ -230,14 +231,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 88842928}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc032a6bf78214f8fb802bc67054fd21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rigid: {fileID: 88842934}
   moveSpeed: 0.1
-  jumpForce: 0
+  jumpForce: 300
 --- !u!54 &88842934
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -264,6 +265,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a79d3d600a66a4caeb97c5960d92fbf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &88842936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88842928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 153b19a3d66d845879e8c0c3baf9e142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &186076775
@@ -1143,13 +1156,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1322854215}
-  m_LocalRotation: {x: 0.13052616, y: 0, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: 0, y: 2, z: -5}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 88842929}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1322854217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1171,7 +1184,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1322854215}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8977c106630914661a5a727e76cd8737, type: 3}
   m_Name: 
