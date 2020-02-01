@@ -1276,7 +1276,7 @@ MonoBehaviour:
   sounds:
   - name: Head
     clip: {fileID: 8300000, guid: ef87679831bb0ed48bb9833f3db8feb1, type: 3}
-    volume: 1
+    volume: 0.8
     loop: 1
     source: {fileID: 0}
   - name: Torso
@@ -1300,9 +1300,14 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: Leg2
-    clip: {fileID: 8300000, guid: c6084fb658eab4248837d675c340df82, type: 3}
+    clip: {fileID: 8300000, guid: c51e66c2a2ec9c84ab3caf473dbb8c85, type: 3}
     volume: 0
     loop: 1
+    source: {fileID: 0}
+  - name: PickUpPart
+    clip: {fileID: 8300000, guid: fbb36ce0b6f19a842aa74353f60d4c60, type: 3}
+    volume: 1
+    loop: 0
     source: {fileID: 0}
 --- !u!4 &1561689430
 Transform:
