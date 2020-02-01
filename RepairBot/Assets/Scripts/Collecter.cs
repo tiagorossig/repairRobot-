@@ -6,8 +6,10 @@ public class Collecter : MonoBehaviour
 {
 
     private bool hasleg1;
+    private bool hasArm;
     private bool hasleg2;
     private bool hasTorso;
+    private bool hasKey;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +17,8 @@ public class Collecter : MonoBehaviour
         hasleg1 = false;
         hasleg2 = false;
         hasTorso = false;
+        hasArm = false;
+        hasKey = false;
     }
 
     // Update is called once per frame
@@ -36,6 +40,11 @@ public class Collecter : MonoBehaviour
     public bool gotleg2()
     {
         return hasleg2;
+    }
+
+    public bool gotArm()
+    {
+        return hasArm;
     }
 
 
@@ -61,6 +70,7 @@ public class Collecter : MonoBehaviour
             {
                 Destroy(other);
                 transform.FindChild("arm").gameObject.SetActive(true);
+                hasArm = true;
             }
             if ("Arm2".Equals(other.tag))
             {
@@ -101,6 +111,16 @@ public class Collecter : MonoBehaviour
                 }
                 transform.FindChild("leg2").gameObject.SetActive(true);
             }
+        }
+        if ("Key".Equals(other.tag))
+        {
+            if (hasArm)
+            {
+                Destroy(other);
+                transform.FindChild("arm").FindChild("key").gameObject.SetActive(true);
+                hasKey = true;
+            }
+            else return;
         }
     }
 }
