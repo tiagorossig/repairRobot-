@@ -23,4 +23,9 @@ public class MovementController : MonoBehaviour
             rigid.AddForce(Vector3.up * jumpForce);
         }
     }
+
+    public void setMoveSpeed(float newspeed)
+    {
+        moveSpeed = newspeed;
+    }
 }

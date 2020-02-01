@@ -31,6 +31,8 @@ public class Collecter : MonoBehaviour
             Vector3 temp = transform.position;
             transform.position = new Vector3(temp.x, 1.6f, temp.z);
             transform.FindChild("torso").gameObject.SetActive(true);
+            gameObject.GetComponent<Rigidbody>().mass += 3;
+            gameObject.GetComponent<MovementController>().setMoveSpeed(0.2f);
             hasTorso = true;
         }
         if (hasTorso)
