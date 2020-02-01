@@ -30,7 +30,7 @@ public class MovementController : MonoBehaviour
             float hori = Input.GetAxis("Horizontal");
             if((vert != 0 || hori != 0) && isGrounded)
             {
-                rigid.AddForce(transform.forward * vert * moveSpeed * 1500 + transform.up * jumpForce + transform.right * hori * moveSpeed * 1500);
+                rigid.AddForce(transform.forward * vert * moveSpeed * 1500 + transform.up * 500 + transform.right * hori * moveSpeed * 1500);
                 isGrounded = false;
             }
         } else if(movement == 2)

@@ -80,9 +80,9 @@ public class Collecter : MonoBehaviour
                 if (hasleg1 && hasleg2)
                 {
                     gameObject.GetComponent<MovementController>().setJumpForce(1700);
+                    gameObject.GetComponent<MovementController>().setMovement(2);
                 }
                 transform.FindChild("leg").gameObject.SetActive(true);
-                gameObject.GetComponent<MovementController>().setMovement(2);
             }
             if ("Leg2".Equals(other.tag))
             {
@@ -97,9 +97,9 @@ public class Collecter : MonoBehaviour
                 if (hasleg1 && hasleg2)
                 {
                     gameObject.GetComponent<MovementController>().setJumpForce(1700);
+                    gameObject.GetComponent<MovementController>().setMovement(2);
                 }
                 transform.FindChild("leg2").gameObject.SetActive(true);
-                gameObject.GetComponent<MovementController>().setMovement(2);
             }
         }
     }
